@@ -1,11 +1,16 @@
 
 import './App.css'
-
+import './assets/css/style.css'
+import Footer from './components/Footer'
+import Header from './components/Header'
+import Main from './components/Main'
 function App() {
 
   return (
     <>
-    <h1>hello how are ujfdj d dj i fjf and what about youf ff dfj djfkd fjff fdsfdj</h1>
+    <Header/>
+    <Main/>
+    <Footer/>
     </>
   )
 }
