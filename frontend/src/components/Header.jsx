@@ -6,11 +6,11 @@ const Header = () => {
     <>
     
     <nav className='navbar container pt-3 pb-3 align-items-start'>
-     <a href="" className='navbar-brand text-light'>Stock Prediction Portal</a>
+     <Button  class='navbar-brand text-light' text='Stock Prediction Portal' url='/' />
      <div>
-        <Button text = 'Login' class='btn-outline-info'/>
+        <Button text = 'Login' class='btn-outline-info' url='/login'/>
          &nbsp;
-        <Button text='Register' class='btn-info'/>
+        <Button text='Register' class='btn-info' url='/register' />
      </div>
     </nav>
     </>
