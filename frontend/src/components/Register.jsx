@@ -1,5 +1,6 @@
 import React, { use, useState } from 'react'
 import axios from 'axios'
+import axiosInstance from '../axiosInstance'
 
 const Register = () => {
   const [username, setUsername] = useState("")
@@ -13,7 +14,7 @@ const Register = () => {
     setLoading(true)
     try{
       const userData = {username, email, password}
-      const response = await axios.post('http://127.0.0.1:8000/api/v1/register/', userData)
+      const response = await axiosInstance.post('/register/', userData)
       setErrors({})
       setSuccess(true)
     }
