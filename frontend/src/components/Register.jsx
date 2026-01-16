@@ -17,6 +17,7 @@ const Register = () => {
       const response = await axiosInstance.post('/register/', userData)
       setErrors({})
       setSuccess(true)
+
     }
     catch(error){
         setErrors(error.response.data)
@@ -45,7 +46,7 @@ const Register = () => {
                       <input type="password" required className='form-control' value={password} onChange={(e)=>setPassword(e.target.value)} placeholder='Enter Password' />
                       <small className='text-danger'>{errors.password && errors.password}</small>
                     </div>
-                    {success &&<div className="alert alert-info">Account Created Successfully!</div>}
+                    {success &&<div className="alert alert-info">Account Created Successfully. Please Login!</div>}
                     {loading? <button type='submit' className='btn btn-info d-block mx-auto'>Please wait...</button> : 
                     <button type='submit' className='btn btn-info d-block mx-auto'>Register</button>
                     }
